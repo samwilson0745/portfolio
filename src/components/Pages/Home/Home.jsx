@@ -1,9 +1,10 @@
 import "./home.css";
 import { TypeAnimation } from 'react-type-animation';
 import soham from '../../../assets/profile/soham-nobg.png';
-import linkedInIcon from '../../../assets/home/linkedin.svg'
 import LinkedInLogo from "./Logos/LinkedInLogo";
 import GithubLogo from "./Logos/GithubLogo";
+import { Link } from "react-scroll";
+
 const Home = ()=>{
     
     const container1 = {
@@ -36,6 +37,9 @@ const Home = ()=>{
                 <a href="https://github.com/samwilson0745" className="custom-icon-link">
                     <GithubLogo color="black" />
                 </a>
+            </div>
+            <div>
+                <button class="elevated-button"><Link activeClass="my-active" smooth={true} spy={true} to="contact">Contact me</Link></button>
             </div>
             </div>
             <div>
