@@ -3,6 +3,7 @@ import { TypeAnimation } from 'react-type-animation';
 import soham from '../../../assets/profile/soham-nobg.png';
 import linkedInIcon from '../../../assets/home/linkedin.svg'
 import LinkedInLogo from "./Logos/LinkedInLogo";
+import GithubLogo from "./Logos/GithubLogo";
 const Home = ()=>{
     
     const container1 = {
@@ -11,7 +12,7 @@ const Home = ()=>{
     return(
         <div className="home row" name="home" >
             <div style={container1}>
-                <h1>Welcome !</h1>
+                <h1 style={{fontSize:'2em',color:'white',fontWeight:"100",letterSpacing:"3px"}}>Welcome !</h1>
                 <TypeAnimation
                     sequence={[
         // Same substring at the start will only be typed out once, initially
@@ -24,22 +25,16 @@ const Home = ()=>{
                     ]}
                 wrapper="span"
                 speed={50}
-                style={{ fontSize: '3em', display: 'inline-block' }}
+                style={{ fontSize: '4em', display: 'inline-block' ,color:'white',letterSpacing:"3px"}}
                 repeat={Infinity}
             />
-            <h4>I make the complex simple</h4>
+            <h4 style={{color:"white",letterSpacing:"3px",fontWeight:"100"}}>I make the complex simple</h4>
             <div className="row-icons">
                 <a href="https://www.linkedin.com/in/soham-deb-majumder-35b959210/" className="custom-icon-link">
                     <LinkedInLogo color="#0077B5"/>
                 </a>
-                <a href="https://www.linkedin.com/in/soham-deb-majumder-35b959210/" className="custom-icon-link">
-                    <LinkedInLogo color="blue"/>
-                </a>
-                <a href="https://www.linkedin.com/in/soham-deb-majumder-35b959210/" className="custom-icon-link">
-                    <LinkedInLogo color="blue"/>
-                </a>
-                <a href="https://www.linkedin.com/in/soham-deb-majumder-35b959210/" className="custom-icon-link">
-                    <LinkedInLogo color="blue"/>
+                <a href="https://github.com/samwilson0745" className="custom-icon-link">
+                    <GithubLogo color="black" />
                 </a>
             </div>
             </div>
