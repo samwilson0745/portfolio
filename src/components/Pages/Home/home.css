@@ -1,0 +1,47 @@
+.home{
+  margin: 0;
+  padding: 0 10vw;
+  height: 100vh;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.row-icons{
+  display: flex;
+  align-items: center;
+  
+}
+.my-image{
+  width: 30vw;
+  height: auto;
+}
+.custom-icon-link{
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.4s;
+}
+.logo-container{
+  margin:10px 20px 0 0;
+}
+.icon path{
+  margin:10px 20px 0 0;
+  width: 50px;
+  height:50px;
+  transition: fill 1.5s;
+}
+.custom-icon-link:hover .icon {
+  width: 55px;
+  height:55px; /* Larger icon size on hover */
+}
+.icon:hover path{
+  fill: aliceblue;
+}
+svg{
+  width: 50px;
+  height: 50px;
+}
+
+
