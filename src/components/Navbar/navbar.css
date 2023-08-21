@@ -10,7 +10,6 @@
     color: whitesmoke;
   }
   .navbar a:hover{
-    color: cornflowerblue;
     cursor: pointer;
   }
   .navbar{
@@ -38,4 +37,25 @@
   .hidden {
     top: -100px; /* Adjust this value to match the height of your navbar */
   }
+  .animated-underline {
+    position: relative;
+    display: inline-block;
+  }
   
+  .animated-underline::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* Adjust this value to control the distance of the underline from text */
+    width: 100%;
+    height: 2px; /* Adjust this value to control the thickness of the underline */
+    background-color: white; /* Change this color to your desired underline color */
+    transform: scaleX(0); /* Initially scale the underline to 0 width */
+    transform-origin: right center;
+    transition: transform 0.3s ease; /* Adjust the animation duration and timing function as needed */
+  }
+  
+  .animated-underline:hover::before {
+    transform: scaleX(1); /* Scale the underline back to full width on hover */
+    transform-origin: left center;
+  }
