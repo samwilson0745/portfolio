@@ -25,11 +25,11 @@ const NavBar = ()=>{
     return (
         <nav className={`navbar ${visible ? 'visible':'hidden'}`}>
             <div className='links' style={{ align:"right"}}>
-                    <Link activeClass="my-active"  smooth={true} spy={true} to="home">Home</Link>
-                    <Link activeClass="my-active"  smooth={true} spy={true} to="projects">Projects</Link>
-                    <Link activeClass="my-active"  smooth={true} spy={true} to="skills">Skills</Link>
-                    <Link activeClass="my-active"  smooth={true} spy={true} to="about">About</Link>
-                    <Link activeClass="my-active"  smooth={true} spy={true} to="contact">Contact</Link>
+                    <Link activeClass="my-active"  smooth={true} spy={true} to="home">HOME</Link>
+                    <Link activeClass="my-active"  smooth={true} spy={true} to="projects">PROJECTS</Link>
+                    <Link activeClass="my-active"  smooth={true} spy={true} to="skills">SKILLS</Link>
+                    <Link activeClass="my-active"  smooth={true} spy={true} to="about">ABOUT</Link>
+                    <Link activeClass="my-active"  smooth={true} spy={true} to="contact">CONTACT</Link>
             </div>
         </nav>
     )
