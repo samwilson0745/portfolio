@@ -1,45 +1,61 @@
 import './projects.css';
-import { useState, useRef} from 'react';
-import ArrowRightLogo from './Logos/ArrowRight';
-
+import {useRef} from 'react';
+import GithubLogo from '../../components/Logos/GithubLogo';
 const Projects = ()=>{
-    const items = ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5']; // Add more items as needed
-  const itemsPerPage = 3;
-  const [currentPage, setCurrentPage] = useState(0);
+    const projects = [
+        {
+            "name":"Moonquake-Visualized",
+            "details":"Between 1968-72, Apollo missions gathered seismic data from the Moon. Now, we've innovatively visualized this data in an interactive web app. Users input a date, and animated seismic waves appear on a 3D Moon model.",
+            "link":"https://moonquake-visualized.netlify.app/",
+            "github":"https://shorturl.at/dnV24"
+        },
+        {
+            "name":"Healthy Harvest",
+            "details":"An app leveraging computer vision, AI, and machine learning identifies plant diseases from images, aiding farmers in optimal timing for tasks like watering and pruning.",
+            "github":"https://github.com/samwilson0745/Healthy_Harvest",
+            "link":""
+        },
+        {
+            "name":"Prisavelo",
+            "details":"Prisavelo App: Comprehensive health solution with expert guidance, personalized programs, and community support, addressing diverse wellness needs for overall well-being",
+            "github":"https://shorturl.at/enoS5",
+            "link":""
+        },
+        {
+            "name":"TalkDock",
+            "details":"Talkdock is a full-stack forum application built using the MERN stack, includes such as user registration, profile creation, discussion boards, and advanced search capabilities.",
+            "github":"https://github.com/vishalkrsharma/forum-app",
+            "link":""
+        }
+    ];
+  
+  
   const wrapperRef = useRef(null);
-  const totalPages = Math.ceil(items.length / itemsPerPage);
+  
 
-  const handlePrevPage = () => {
-    setCurrentPage((prevPage) => Math.max(prevPage - 1, 0));
-  };
+  
 
-  const handleNextPage = () => {
-    setCurrentPage((prevPage) => Math.min(prevPage + 1, totalPages - 1));
-  };
-
-  const startIndex = currentPage * itemsPerPage;
-  const visibleItems = items.slice(startIndex, startIndex + itemsPerPage);
 
     return (
         <div className="project list-container" name="pojects">
-            <button onClick={handlePrevPage} disabled={currentPage === 0}>&lt; Prev</button>
-            <div className="horizontal-list">
+            
                 <div
                     ref={wrapperRef}
-                    className="list-items-wrapper"
+                    className='container'
                 >
-                    {visibleItems.map((item, index) => (
-                        <div key={index} className="list-item">
-                            {item}
+                    {projects.map((item, index) => (
+                        <div key={index} className="column">
+                            {item["link"]==""?<h1 className='project-title'>{item["name"]}</h1>:<a href={item["link"]} className='text-link'>{item["name"]}</a>}
+                            <p className='project-subtitle'>{item["details"]}</p>
+                            <div className='project-icon'>
+                            <a href={item["github"]}>
+                                <GithubLogo color='#98989F'/>
+                            </a>
+                            </div>
                         </div>
                     ))}
                 </div>
-            </div>
-            <div className="arrow-container">
-                <button onClick={handleNextPage} disabled={currentPage === totalPages - 1}>
-                    <ArrowRightLogo/>
-                </button>
-            </div>
+            
         </div>
     )
 }
