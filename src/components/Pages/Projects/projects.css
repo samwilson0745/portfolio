@@ -1,7 +1,6 @@
 .project{
   margin: 0;
   padding:0 10vw;
-    background-color: aquamarine;
     height: 100vh;
   }
   .list-container {
@@ -20,16 +19,57 @@
   }
   
   .list-item {
-    padding: 10px;
+    padding: 20px;
     border: 1px solid #ccc;
     margin: 0 5px;
     width: 20vw;
     height: 50vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  .list-items-wrapper {
-    display: flex;
-    transition: transform 0.5s ease; /* Add a smooth transition effect */
+  .container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+  .column{
+    flex: 2;
+    height: 20vh;
+    width: 20vw;
+    padding: 2vw;
+    margin: 1vw; /* Set your desired background color */
+    border-radius: 10px; 
+    background-color: #202127;/* Add rounded corners if desired */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+  }
+  p{
+    text-align: justify;
+    color: aliceblue;
+  }
+  .project-title{
+    color: #DFDFD6;
+    padding-bottom: 5px;
+    font-size: 1.5em;
+  }
+  .project-subtitle{
+    height: 12vh;
+
+    color: #98989F;
+    font-size: 1em;
+  }
+  .project-icon{
+    padding-top: 2vh;
+  }
+  .text-link{
+    color: #DFDFD6;
+    padding-bottom: 5px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    transition-duration: 0.5s;
+    &:hover, &:focus, &:active{
+      cursor: pointer;
+      color: #646CFF !important;
+    }
   }
