@@ -8,48 +8,35 @@
   align-items: center;
   justify-content: space-between;
 }
-.row-icons{
-  display: flex;
-  align-items: center;
-  padding: 3px 3px;
+.heading{
+  font-size: 2.5rem;
+  color: white;
+  font-weight: bolder;
+  letter-spacing: 3px;
+}
+.tag{
+  padding: 1.2rem 0;
 }
 .my-image{
-  width: 30vw;
+  width: 20vw;
   height: auto;
+  border-radius: 50%;
+  height: auto;
+  box-shadow: 0 0 15px 5px #446DA3, /* Adjust the color stops for the gradient */
+              0 0 30px 10px #7C36B3,
+              0 0 45px 15px #2E5D78,
+              0 0 60px 20px #542671; 
 }
-.custom-icon-link{
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
-  transition: transform 0.4s;
-}
-.logo-container{
-  margin:10px 20px 0 0;
-}
-.icon path{
-  margin:10px 20px 0 0;
-  width: 50px;
-  height:50px;
-  transition: fill 1.5s;
-}
-.custom-icon-link:hover .icon {
-  width: 55px;
-  height:55px; /* Larger icon size on hover */
-}
-.icon:hover path{
-  fill: aliceblue;
-}
-svg{
-  width: 50px;
-  height: 50px;
-}
+
+
+
 .elevated-button {
   display: inline-block;
   padding: 10px 20px;
   font-size: 16px;
   font-weight: bold;
   color: white;
-  background-color: #3498db; /* Button background color */
+  background-color: #646CFF; /* Button background color */
   border: none;
   margin: 10px 0;
   border-radius: 20px;
@@ -66,4 +53,7 @@ svg{
   transform: translateY(1px); /* Simulate pressing the button */
   box-shadow: none; /* Remove box shadow on active state */
 }
+
+
+
 
