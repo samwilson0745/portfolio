@@ -2,7 +2,7 @@ import React from "react";
 
 const LinkedInLogo = ({color})=>{
     return(
-        <div className="logo-container">
+        <div>
             <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512.000000 512.000000"
             preserveAspectRatio="xMidYMid meet" className="icon">
