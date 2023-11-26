@@ -1,12 +1,13 @@
 .avatar {
-    width: 100px;
-    height: 100px;
+    width: 20vw;
+    height: 20vh;
     border-radius: 50%; /* Make it circular */
     overflow: hidden;
     background-color: lightgray; /* Fallback background color */
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: blueviolet;
   }
   
   .avatar img {
